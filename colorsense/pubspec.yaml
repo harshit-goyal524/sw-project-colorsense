@@ -30,9 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  camera: ^0.10.5+9
-  image: 4.1.7
-
+  camera: ^0.9.4+5
+  image_picker: ^0.8.5
+  image: ^3.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -42,6 +42,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

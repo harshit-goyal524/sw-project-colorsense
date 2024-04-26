@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LearnRoute extends StatelessWidget {
-  const LearnRoute({Key? key}) : super(key: key);
+  const LearnRoute({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class LearnRoute extends StatelessWidget {
         title: const Text(
           'Learn More',
           style: TextStyle(
-              fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+              fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.black,
       ),
@@ -38,7 +38,7 @@ class LearnRoute extends StatelessWidget {
                   'If you have color blindness (color vision deficiency), it means you see colors differently than most people.'
                       ' \n\nMost of the time, color vision deficiency makes it hard to tell the difference between certain colors.',
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Open Sans'),
@@ -64,7 +64,7 @@ class LearnRoute extends StatelessWidget {
                   'The most common type of color vision deficiency makes it hard to tell the difference between red and green.'
                       'Another type makes blue and yellow look the same. In rare cases, people have complete color vision deficiency, which means they don’t see color at all.',
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Open Sans'),
@@ -118,7 +118,7 @@ class LearnRoute extends StatelessWidget {
                   'Red-green color blindness is the most common form of the condition.'
                       ' This type of color blindness makes it difficult to differentiate between shades of red and green.',
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Open Sans'),
@@ -160,7 +160,7 @@ class LearnRoute extends StatelessWidget {
                   'Blue-yellow color blindness is less common than red-green color blindness, though red-green color blindness often accompanies it.'
                       ' With this type of color blindness, you have trouble differentiating between blue and green, as well as between yellow and red.',
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Open Sans'),
@@ -202,7 +202,7 @@ class LearnRoute extends StatelessWidget {
                   'Complete color blindness is rare. This type of color blindness, also called achromatopsia,'
                       ' occurs when all the cones of the eye are either dysfunctional or missing.',
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Open Sans'),
@@ -226,12 +226,36 @@ class LearnRoute extends StatelessWidget {
                 ),
               ),
               Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Text('Go back!'),
-                ),
+                child: SizedBox(
+                  width: 110,
+                  height: 40,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          const Color.fromARGB(255, 45, 45, 45)),
+                      // foregroundColor: MaterialStateProperty.all(
+                      //     const Color.fromARGB(255, 130, 130, 130))
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(45),
+                          side: const BorderSide(color: Colors.black),
+                        ),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+
+                    },
+                    child: const Text(
+                      'Go Back',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                )
               ),
             ],
           ),
